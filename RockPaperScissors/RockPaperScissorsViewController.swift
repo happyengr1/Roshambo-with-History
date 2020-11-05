@@ -101,6 +101,7 @@ class RockPaperScissorsViewController: UIViewController {
         } else if (segue.identifier == "showHistorySegue") {
             let controller = segue.destination as! HistoryViewController
             controller.history = self.history
+            controller.match   = self.match
         }
     }   /* prepare for segue */
     

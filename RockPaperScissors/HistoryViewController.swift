@@ -12,11 +12,20 @@ import UIKit
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Properties
+    
     var history = [RPSMatch]()
+    var match : RPSMatch!
 
     // MARK: Outlet
 
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Life Cycle
+    
+    override func viewWillAppear(_ animated:Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     // MARK: Table View Delegate
     
